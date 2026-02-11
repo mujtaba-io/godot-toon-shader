@@ -1,0 +1,263 @@
+[gd_scene format=3 uid="uid://duk3scc38fvi5"]
+
+[ext_resource type="Shader" uid="uid://ch2ow2ft6qiw3" path="res://toon-old-version.gdshader" id="1_a202f"]
+[ext_resource type="Shader" uid="uid://dj8n61hri8nap" path="res://toon-improved.gdshader" id="2_noarx"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r3fl7"]
+
+[sub_resource type="Sky" id="Sky_jka67"]
+sky_material = SubResource("ProceduralSkyMaterial_r3fl7")
+
+[sub_resource type="Environment" id="Environment_i5arm"]
+background_mode = 1
+background_color = Color(0.103743516, 0.10374353, 0.103743516, 1)
+sky = SubResource("Sky_jka67")
+
+[sub_resource type="BoxMesh" id="BoxMesh_jka67"]
+
+[sub_resource type="Gradient" id="Gradient_4arys"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.7411765, 0.5411765, 0.26666668, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_6iypd"]
+gradient = SubResource("Gradient_4arys")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tereu"]
+render_priority = 0
+shader = ExtResource("2_noarx")
+shader_parameter/albedo_texture = SubResource("GradientTexture1D_6iypd")
+shader_parameter/diffuse_threshold = 0.5
+shader_parameter/shadow_strength = 0.5
+shader_parameter/specular_threshold = 0.99
+shader_parameter/specular_strength = 2.0
+shader_parameter/specular_color = Color(0.5489626, 0.5489626, 0.54896253, 1)
+shader_parameter/rim_width = 2.0
+shader_parameter/rim_power = 4.0
+shader_parameter/rim_strength = 1.0
+shader_parameter/rim_color = Color(1, 1, 1, 1)
+shader_parameter/lit_part_fersnel_only = false
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_a0tk4"]
+
+[sub_resource type="Gradient" id="Gradient_r3fl7"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.26666668, 0.69411767, 0.7411765, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_jka67"]
+gradient = SubResource("Gradient_r3fl7")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jsk3o"]
+render_priority = 0
+shader = ExtResource("2_noarx")
+shader_parameter/albedo_texture = SubResource("GradientTexture1D_jka67")
+shader_parameter/diffuse_threshold = 0.5
+shader_parameter/shadow_strength = 0.5
+shader_parameter/specular_threshold = 0.97899997991064
+shader_parameter/specular_strength = 2.0
+shader_parameter/specular_color = Color(0.5489626, 0.5489626, 0.54896253, 1)
+shader_parameter/rim_width = 1.18
+shader_parameter/rim_power = 9.0
+shader_parameter/rim_strength = 2.0
+shader_parameter/rim_color = Color(0.42750034, 0.7549283, 0.7520399, 1)
+shader_parameter/lit_part_fersnel_only = false
+
+[sub_resource type="TorusMesh" id="TorusMesh_a202f"]
+
+[sub_resource type="Gradient" id="Gradient_a0tk4"]
+offsets = PackedFloat32Array(0.03731343)
+colors = PackedColorArray(0.5411765, 0.26666668, 0.7411765, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_r3fl7"]
+gradient = SubResource("Gradient_a0tk4")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wc5p8"]
+render_priority = 0
+shader = ExtResource("2_noarx")
+shader_parameter/albedo_texture = SubResource("GradientTexture1D_r3fl7")
+shader_parameter/diffuse_threshold = 0.5
+shader_parameter/shadow_strength = 0.5
+shader_parameter/specular_threshold = 0.97899997991064
+shader_parameter/specular_strength = 2.0
+shader_parameter/specular_color = Color(0.5489626, 0.5489626, 0.54896253, 1)
+shader_parameter/rim_width = 1.18
+shader_parameter/rim_power = 9.0
+shader_parameter/rim_strength = 2.0
+shader_parameter/rim_color = Color(0.97900003, 0.37, 1, 1)
+shader_parameter/lit_part_fersnel_only = false
+
+[sub_resource type="SphereMesh" id="SphereMesh_noarx"]
+
+[sub_resource type="Gradient" id="Gradient_noarx"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.26666668, 0.7372549, 0.54901963, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_a0tk4"]
+gradient = SubResource("Gradient_noarx")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jka67"]
+render_priority = 0
+shader = ExtResource("2_noarx")
+shader_parameter/albedo_texture = SubResource("GradientTexture1D_a0tk4")
+shader_parameter/diffuse_threshold = 0.5
+shader_parameter/shadow_strength = 0.5
+shader_parameter/specular_threshold = 0.99
+shader_parameter/specular_strength = 2.0
+shader_parameter/specular_color = Color(1, 1, 1, 1)
+shader_parameter/rim_width = 2.0
+shader_parameter/rim_power = 4.0
+shader_parameter/rim_strength = 2.0
+shader_parameter/rim_color = Color(0.26, 1, 0.45733333, 1)
+shader_parameter/lit_part_fersnel_only = true
+
+[sub_resource type="Gradient" id="Gradient_jka67"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.101960786, 0.101960786, 0.101960786, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_i5arm"]
+gradient = SubResource("Gradient_jka67")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4arys"]
+render_priority = 0
+shader = ExtResource("2_noarx")
+shader_parameter/albedo_texture = SubResource("GradientTexture1D_i5arm")
+shader_parameter/diffuse_threshold = 0.5
+shader_parameter/shadow_strength = 0.0
+shader_parameter/specular_threshold = 0.89999997615814
+shader_parameter/specular_strength = 0.0
+shader_parameter/specular_color = Color(1, 1, 1, 1)
+shader_parameter/rim_width = 2.0
+shader_parameter/rim_power = 4.0
+shader_parameter/rim_strength = 0.0
+shader_parameter/rim_color = Color(1, 1, 1, 1)
+shader_parameter/lit_part_fersnel_only = false
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_6iypd"]
+material = SubResource("ShaderMaterial_4arys")
+size = Vector2(32, 32)
+
+[sub_resource type="SphereMesh" id="SphereMesh_a202f"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a0tk4"]
+render_priority = 0
+shader = ExtResource("1_a202f")
+shader_parameter/albedo_color = Color(0.26615655, 0.73740554, 0.5489453, 1)
+shader_parameter/diffuse_threshold = 0.5
+shader_parameter/shadow_strength = 0.5
+shader_parameter/specular_threshold = 0.97899997991064
+shader_parameter/specular_strength = 2.0
+shader_parameter/specular_color = Color(0.5489626, 0.5489626, 0.54896253, 1)
+shader_parameter/rim_width = 1.18
+shader_parameter/rim_power = 9.0
+shader_parameter/rim_strength = 2.0
+shader_parameter/rim_color = Color(0.517, 1, 0.37, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_noarx"]
+render_priority = 0
+shader = ExtResource("1_a202f")
+shader_parameter/albedo_color = Color(0.5426668, 0.2664, 0.74, 1)
+shader_parameter/diffuse_threshold = 0.5
+shader_parameter/shadow_strength = 0.5
+shader_parameter/specular_threshold = 0.97899997991064
+shader_parameter/specular_strength = 2.0
+shader_parameter/specular_color = Color(0.5489626, 0.5489626, 0.54896253, 1)
+shader_parameter/rim_width = 1.18
+shader_parameter/rim_power = 9.0
+shader_parameter/rim_strength = 2.0
+shader_parameter/rim_color = Color(0.97900003, 0.37, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r3fl7"]
+render_priority = 0
+shader = ExtResource("1_a202f")
+shader_parameter/albedo_color = Color(0.2664, 0.69264007, 0.74, 1)
+shader_parameter/diffuse_threshold = 0.5
+shader_parameter/shadow_strength = 0.5
+shader_parameter/specular_threshold = 0.97899997991064
+shader_parameter/specular_strength = 2.0
+shader_parameter/specular_color = Color(0.5489626, 0.5489626, 0.54896253, 1)
+shader_parameter/rim_width = 1.18
+shader_parameter/rim_power = 9.0
+shader_parameter/rim_strength = 2.0
+shader_parameter/rim_color = Color(0.42750034, 0.7549283, 0.7520399, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_i5arm"]
+render_priority = 0
+shader = ExtResource("1_a202f")
+shader_parameter/albedo_color = Color(0.74, 0.5426667, 0.2664, 1)
+shader_parameter/diffuse_threshold = 0.5
+shader_parameter/shadow_strength = 0.5
+shader_parameter/specular_threshold = 0.99
+shader_parameter/specular_strength = 2.0
+shader_parameter/specular_color = Color(0.5489626, 0.5489626, 0.54896253, 1)
+shader_parameter/rim_width = 2.0
+shader_parameter/rim_power = 4.0
+shader_parameter/rim_strength = 1.0
+shader_parameter/rim_color = Color(1, 1, 1, 1)
+
+[node name="Node3D" type="Node3D" unique_id=627094497]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1234147139]
+transform = Transform3D(1, 0, 0, 0, 0.649594, 0.76028126, 0, -0.76028126, 0.649594, 0, 9.813192, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1814170072]
+environment = SubResource("Environment_i5arm")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1106967111]
+transform = Transform3D(0.41310444, -0.26625812, 0.8708911, 0, 0.9563048, 0.2923717, -0.91068363, -0.12078004, 0.39505374, 2.492, 1.12, -0.768)
+
+[node name="Node" type="Node3D" parent="." unique_id=2044581932]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0018186569, 0, 0)
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Node" unique_id=1268500059]
+transform = Transform3D(0.8706564, -0.11346035, 0.47862747, 6.8742385e-09, 0.97303414, 0.2306612, -0.49189174, -0.20082664, 0.8471784, 0, 0, -1.5211256)
+mesh = SubResource("BoxMesh_jka67")
+surface_material_override/0 = SubResource("ShaderMaterial_tereu")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Node" unique_id=1854191510]
+transform = Transform3D(-0.52093184, 0.51480365, -0.680887, 0.70291066, 0.71127796, 2.1197739e-08, 0.48429996, -0.4786028, -0.7323885, 0, 0, -6.431164)
+mesh = SubResource("CylinderMesh_a0tk4")
+surface_material_override/0 = SubResource("ShaderMaterial_jsk3o")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Node" unique_id=968925529]
+transform = Transform3D(0.8067232, 0.59092957, 0, -0.59092957, 0.8067232, 0, 0, 0, 1, 0, 0, -3.63189)
+mesh = SubResource("TorusMesh_a202f")
+surface_material_override/0 = SubResource("ShaderMaterial_wc5p8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node" unique_id=214134363]
+mesh = SubResource("SphereMesh_noarx")
+surface_material_override/0 = SubResource("ShaderMaterial_jka67")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Node" unique_id=1677727636]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.785, 0)
+mesh = SubResource("PlaneMesh_6iypd")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Node" unique_id=2132783971]
+transform = Transform3D(1.9657568, 1.9657568, 0, -1.9657568, 1.9657568, 0, 0, 0, 2.78, -19.466038, 0, -10.177093)
+mesh = SubResource("PlaneMesh_6iypd")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Node" unique_id=1571957602]
+transform = Transform3D(1.2099999, 1.2099999, -1.7111984, -1.7111984, 1.7111984, 0, 1.2099999, 1.2099999, 1.7111984, -19.466038, 0, -22.954184)
+mesh = SubResource("PlaneMesh_6iypd")
+
+[node name="Node3D" type="Node3D" parent="." unique_id=2027209082]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.121964, 0, 0)
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D" unique_id=468698700]
+mesh = SubResource("SphereMesh_a202f")
+surface_material_override/0 = SubResource("ShaderMaterial_a0tk4")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Node3D" unique_id=82605196]
+transform = Transform3D(0.8067232, 0.59092957, 0, -0.59092957, 0.8067232, 0, 0, 0, 1, 0, 0, -3.63189)
+mesh = SubResource("TorusMesh_a202f")
+surface_material_override/0 = SubResource("ShaderMaterial_noarx")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Node3D" unique_id=707332292]
+transform = Transform3D(-0.5209319, 0.5148037, -0.680887, 0.7029107, 0.7112781, 0, 0.4843, -0.47860277, -0.7323885, 0, 0, -6.431164)
+mesh = SubResource("CylinderMesh_a0tk4")
+surface_material_override/0 = SubResource("ShaderMaterial_r3fl7")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D" unique_id=318714742]
+transform = Transform3D(0.8706564, -0.11346034, 0.47862753, 0, 0.9730342, 0.23066118, -0.49189177, -0.20082663, 0.8471784, 0, 0, -1.5211256)
+mesh = SubResource("BoxMesh_jka67")
+surface_material_override/0 = SubResource("ShaderMaterial_i5arm")
